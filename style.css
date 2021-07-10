@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald';
+    overflow-x: hidden;
+}
+
+button {
+    outline: none;
+    border: 1px solid black;
+    padding: 10px 15px;
+    border-radius: 2px;
+    background-color:transparent;
+    cursor: pointer;
+    font-family: 'Oswald';
+    font-weight: 500;
+}
+
+/* start nav */
+nav {
+    padding: 15px 0;
+    background-color:teal
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.item-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-item img {
+    width: 150px;
+    height: auto;
+}
+
+.right-item ul {
+    width: 350px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-item a {
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    padding-top: 10px;
+}
+
+.right-item a:hover {
+    border-bottom: 2px solid orangered;
+}
+
+
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 28px;
+    background-color: aliceblue;
+    border-radius: 15%;
+    transition: all 0.5s;
+}
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: orangered;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color:orangered;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+/* end nav */
+
+/* --PRPRPR-----------------------------------------------------------------
+---------------------------------------------------------------------- */
+/* main */
+main {
+    max-width: 100%;
+    height: 600px;
+}
+
+.main-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.background {
+    width: 50%;
+    height: auto;
+    margin-top: 70px;
+    z-index: -99;
+}
+
+.background img {
+    max-width: 400px;
+    height: auto;
+}
+
+.title {
+    width: 50%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -99;
+}
+
+.title h1 {
+    font-weight: 500;
+}
+
+.title p {
+    font-weight: 200;
+}
+
+.title a {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 20px;
+    color: orangered;
+    padding-top: 50px;
+    z-index: 99;
+}
+
+.car1 {
+    max-height: 600px;
+    max-width: 100%;
+    position: absolute;
+}
+/* end main */
+/* -------------------------------------------------------------------
+=-------------------------------------------------------------------- */
+
+
+
+/* --------------------------------------------------------------------------- */
+/* paket */
+.paket {
+    height: auto;
+    width: 100%;
+    background-color: rgb(255, 252, 247);
+}
+
+.title-paket {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-weight: 500;
+
+}
+
+.paket-item-wraper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.paket-item {
+    height: auto;
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.logo img {
+    height:120px;
+    width: 120px;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.caption h1 {
+    font-weight: 300;
+    text-align: center;
+}
+
+.caption p {
+    font-size: 20px;
+    color: orangered;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+.caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caption ul {
+    font-weight: 300;
+}
+
+.caption a {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.caption button {
+    background-color: teal;
+    color: white;
+    border: transparent;
+    border-radius: 20px;
+}
+
+
+/* end paket */
+
+
+/* ------------------------------------------------------------------ */
+/* testimoni */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.card-wrapper {
+    display: flex;
+    height: 600px;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimoni-title h1 {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+    font-weight: 300;
+}
+
+.card {
+    height: 500px;
+    width: 30%;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2), -10px -10px 15px rgba(245, 245, 245, 0.1) ;
+    border-radius: 5px;
+}
+
+.image img {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.caption-card{
+    padding: 20px 20px;
+    font-weight: 200;
+}
+
+.caption h2, h3 {
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+/* end testimoni */
+/* --------------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------------- */
+/* contact */
+.contact {
+    height: 400px;
+    width: 100%;
+    background-image:url(img/1.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact button {
+    background-color: rgba(255, 255, 255, 0.404);
+    margin: 20px 10px;
+}
+
+.contact h1 {
+    font-weight: 500px;
+}
+
+.contact h2 {
+    font-weight: 300;
+}
+
+.contact a {
+    text-decoration: none;
+    font-weight: 300;
+    color: black;
+    font-size: 40px;
+    padding: 10px 0;
+}
+/* end Contact */
+
+
+/* ----------------------------------------------------------------------------- */
+/* footer */
+footer {
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.footer-wrapper {
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom:1px solid rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    width: 30%;
+}
+
+.left img {
+    width: 150px;
+    height: auto;
+}
+
+.center ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.center li {
+    border: 2px solid black ;
+    margin: 0 10px;
+    padding: 0 12px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border-radius: 50%;
+}
+
+.center li:hover {
+    border: 2px solid orangered;
+    transition: all 0.1s;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.center img {
+    height: 20px;
+    width: 20px;
+}
+
+.right ul {
+    list-style: none;
+    display: flex;
+}
+
+.right {
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right li {
+    padding: 0 10px;
+}
+
+.right a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.end-footer {
+    padding: 40px 0;
+    display: flex;
+    font-weight: 300;
+    justify-content: center;
+}
+
+.end-footer a{
+    text-decoration: none;
+    padding: 0 10px;
+    display: pointer;
+    color: black;
+}
+
+.end-footer a:hover {
+    color: orangered;
+    border-bottom: 1px solid orangered;
+}
+/* ------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------ */
+/* wa contact */
+.bawah {
+    height: 700px;
+    width: 100%;
+    position: fixed;
+}
+
+.bawah {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.bawah a {
+    z-index: 9999;
+}
+
+.bawah img {
+    height: 50px;
+    width: 50px;
+    margin-top: 500px;
+    margin-right: 20px;
+}
+/* ------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------ */
+/* maps */
+.maps {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+/* ------------------------------------------------------------------------------ */
+
+/* breakpoint tablet */
+@media screen and (max-width:670px) {
+    .menu-toggle {
+        display: flex;
+        margin-top: 18px;
+    }
+
+    .right-item ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        background-color: grey;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+
+    .right-item ul.slide {
+        transform: translateX(0);
+    }
+
+    main {
+        font-size: 10px;
+    }
+
+    .testimoni-title h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .card-wrapper {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .contact {
+        font-size: 20px;
+        text-align: center;
+        word-wrap: normal;
+    }
+
+    .paket {
+        height: auto;
+    }
+
+    .paket-item {
+        width: 100%;
+    }
+
+    .contact h1, h2 {
+        width: 60%;
+        font-size: 20px;
+    }
+
+    .footer {
+        width: 50%;
+    }
+
+    .left img {
+        width: 120px;
+        height: auto;
+    }
+
+    .right {
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+}
